@@ -1,2 +1,8 @@
 # Ignore caches from clangd
 .cache
+
+# Ignore local vscode config giles
+.vscode
+
+# Doxygen related stuffs
+docs/doxygen/build
