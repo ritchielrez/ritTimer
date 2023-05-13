@@ -4,7 +4,6 @@
 
 namespace rit
 {
-
 using Chrono = std::chrono::high_resolution_clock;
 using ChronoTime = Chrono::time_point;
 
@@ -29,7 +28,6 @@ class Timer
     ChronoTime mStartTime, mEndTime, mPausedTime;
     double mTimeDuration;
 };
-
 }; // namespace rit
 
 #define RIT_TIMER_HPP_INCLUDED
@@ -39,7 +37,6 @@ class Timer
 
 namespace rit
 {
-
 Timer::Timer()
 {
     start();
@@ -89,7 +86,6 @@ void Timer::unPause()
         mStartTime = ChronoTime(Chrono::now() - mPausedTime);
     }
 }
-
 }; // namespace rit
 
 #endif // RIT_TIMER_IMPLEMENTATION
