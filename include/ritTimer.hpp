@@ -1,15 +1,27 @@
+/**
+ * @file ritTimer.hpp
+ * @author Ritchiel Rez
+ * @brief 
+ * @version 1.0
+ * 
+ * @mainpage Ritchiel's timer Library Documentation
+ */
+
 #ifndef RIT_TIMER_HPP_INCLUDED
 #include <chrono>
 #include <ratio>
 
+/// @brief rit namespace used to call methods related to this library
 namespace rit
 {
 using Chrono = std::chrono::high_resolution_clock;
 using ChronoTime = Chrono::time_point;
 
+/// @brief milli and sec are std::ratio types which are used to define precision of the elapsed time
 using milli = std::milli;
 using sec = std::ratio<1>;
 
+/// @brief Timer class to create a timer to count time
 class Timer
 {
   public:
@@ -37,11 +49,13 @@ class Timer
 
 namespace rit
 {
+/// @brief Constructor to start the timer
 Timer::Timer()
 {
     start();
 }
 
+/// @brief Start the timer
 void Timer::start()
 {
     mStartTime = Chrono::now();
@@ -49,6 +63,7 @@ void Timer::start()
     mRunning = true;
 }
 
+/// @brief Stop the timer
 void Timer::stop()
 {
     mEndTime = Chrono::now();
@@ -56,6 +71,9 @@ void Timer::stop()
     mRunning = false;
 }
 
+/// @brief Get the elapsed time
+/// @tparam Duration specify precision with std::ratio types
+/// @return duration converted to double
 template <typename Duration> double Timer::getTicks()
 {
     if (mRunning)
@@ -69,6 +87,7 @@ template <typename Duration> double Timer::getTicks()
     return mTimeDuration;
 }
 
+/// @brief Pause the timer
 void Timer::pause()
 {
     if (mRunning && !mPause)
@@ -78,6 +97,7 @@ void Timer::pause()
     }
 }
 
+/// @brief Unpause the timer
 void Timer::unPause()
 {
     if (mRunning && mPause)
