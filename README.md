@@ -67,3 +67,7 @@ int main()
 As you can see from the examples, if you want to use the library, in your main source file you need to define
 `RIT_TIMER_IMPLEMENTATION` macro. Because this library is a **header only library**, you will just need to copy
 the `ritTimer.hpp` to your include directory of your project.
+
+## Documention:
+For documentation for this project, open up the `api.md` file under `docs/` folder. This documentation is generated
+using doxygen and moxygen.
