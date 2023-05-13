@@ -1,0 +1,2 @@
+# Ignore caches from clangd
+.cache
