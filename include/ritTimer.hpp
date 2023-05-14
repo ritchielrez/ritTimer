@@ -5,6 +5,7 @@
  * @version 1.0
  * 
  * @mainpage Ritchiel's timer Library Documentation
+ * A std::chrono based library to count elapsed time between specific time points.
  */
 
 #ifndef RIT_TIMER_HPP_INCLUDED
