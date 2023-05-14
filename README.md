@@ -69,5 +69,6 @@ As you can see from the examples, if you want to use the library, in your main s
 the `ritTimer.hpp` to your include directory of your project.
 
 ## Documention:
-For documentation for this project, open up the `api.md` file under `docs/` folder. This documentation is generated
+For documentation for this project, open up the `api.md` file under `docs/` folder. You can also checkout the documentation
+here, https://ritchielrez.github.io/ritTimer/docs/doxygen/build/html/index.html. This documentation is generated
 using doxygen and moxygen.
